@@ -76,6 +76,11 @@ int ini_parse_stream(ini_reader reader, void* stream, ini_handler handler,
 #define INI_MAX_LINE 200
 #endif
 
+/* Send section change lines to the handler, name and value will be empty strings (default is no) */
+#ifndef NOTIFY_SECTION_CHANGE
+#define NOTIFY_SECTION_CHANGE 0
+#endif
+
 #ifdef __cplusplus
 }
 #endif
